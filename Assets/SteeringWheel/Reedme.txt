@@ -1,0 +1,26 @@
+Enjoy simple to setup, touch steering wheel for your car mobile controls; 
+Usually car physics packages are using Horizontal axis to control steering angle, so all you need is 
+replace Horizontal axis with SteeringWheel.GetInput();
+-------------------------------------------------------------------------------------------------------
+For example:
+
+default PC controls:
+
+		steerInput = Input.GetAxis("Horizontal");
+
+Using steering wheel:
+
+		public SteeringWheel SW;
+		steerInput = SW.GetInput();
+
+Done.
+-------------------------------------------------------------------------------------------------------
+
+Also there is 2 more usefull functions: SteeringWheel.GetAngle()  - Returns rotation angle;
+										SteeringWheel.isPressed() - Is steering wheel pressed or not;
+
+
+To work properly and avoid any errors, your steering wheel object (UI Image), should have EventTrigger
+and CanvasGroup components on it.
+
+If you have any difficulties you always can contact me with @: nbg_yalta@hotmail.com
