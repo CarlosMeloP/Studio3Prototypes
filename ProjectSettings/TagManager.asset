@@ -11,6 +11,13 @@ TagManager:
   - parked_car
   - gamemasterloop
   - police_car
+  - platform
+  - enemy
+  - upper
+  - Checkpoint
+  - Player
+  - Log
+  - Token
   layers:
   - Default
   - TransparentFX
@@ -22,9 +29,9 @@ TagManager:
   - 
   - Menu Items
   - Environment
-  - 
-  - 
-  - 
+  - Player
+  - Log
+  - Token
   - 
   - 
   - 
