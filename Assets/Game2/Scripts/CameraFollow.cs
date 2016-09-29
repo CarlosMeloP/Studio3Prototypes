@@ -13,6 +13,7 @@ public class CameraFollow : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if(Camera.main.WorldToScreenPoint(target.transform.position).y>Screen.height/2)
 		transform.position = new Vector3(transform.position.x,target.position.y + gap,transform.position.z);
 	}
 }

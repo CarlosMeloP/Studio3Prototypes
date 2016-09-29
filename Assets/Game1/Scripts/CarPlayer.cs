@@ -13,6 +13,7 @@ public class CarPlayer : MonoBehaviour
 	private bool win;					//Have we won
 
     public bl_Joystick Joystick;
+    public bool activateJoystick;
 
     void Start ()
 	{
@@ -35,19 +36,48 @@ public class CarPlayer : MonoBehaviour
 		if (Application.platform != RuntimePlatform.Android)
 		{
 			//If Horizontal is not 0
-			if (Joystick.Horizontal != 0)
+			if (Input.GetAxis("Horizontal")!= 0)
 			{
 				//If Vertical is not 0
-				if (Joystick.Vertical != 0)
+				if (Input.GetAxis("Vertical") != 0)
 				{
 					//Rotate the player
-					transform.Rotate(0, Joystick.Horizontal * rotSpeed * 10 * Time.smoothDeltaTime,0);
+					transform.Rotate(0, Input.GetAxis("Horizontal") * rotSpeed * 10 * Time.smoothDeltaTime,0);
 				}
 			}
 			
 			//Move the player
-			GetComponent<Rigidbody>().AddForce(transform.forward * -Joystick.Vertical * (moveSpeed - 5) * 100 * Time.smoothDeltaTime);
+			GetComponent<Rigidbody>().AddForce(transform.forward * -Input.GetAxis("Vertical") * (moveSpeed - 5) * 100 * Time.smoothDeltaTime);
 		}
+        if(activateJoystick==true)
+        {
+             //If Horizontal is not 0
+             if (Joystick.Horizontal != 0)
+             {
+                 //If Vertical is not 0
+                 if (Joystick.Vertical != 0)
+                 {
+                     //Rotate the player
+                     transform.Rotate(0, Joystick.Horizontal * rotSpeed * Time.smoothDeltaTime, 0);
+                    /*
+                    if (Joystick.Vertical>0)
+                    { 
+                    GetComponent<Rigidbody>().AddForce(transform.right * -Joystick.Horizontal * moveSpeed *50 * Time.smoothDeltaTime);
+                    }
+                    if (Joystick.Vertical < 0)
+                    {
+                        GetComponent<Rigidbody>().AddForce(transform.right * Joystick.Horizontal * moveSpeed * 50 * Time.smoothDeltaTime);
+                    }
+                    */
+                }
+             }
+
+             //Move the player
+             GetComponent<Rigidbody>().AddForce(transform.forward * -Joystick.Vertical * moveSpeed  * 100 * Time.smoothDeltaTime);
+             
+           // Vector3 translate = (new Vector3(-Joystick.Horizontal, 0,-Joystick.Vertical) * Time.deltaTime) * moveSpeed/2;
+           // transform.Translate(translate);
+        }
 		
 	}
 	

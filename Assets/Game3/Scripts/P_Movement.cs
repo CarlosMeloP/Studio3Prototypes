@@ -20,7 +20,7 @@ public class P_Movement : MonoBehaviour
                     xPos++;
                     t = 0.0f;
                 }
-                if (Input.GetTouch(0).position.x < Screen.width / 2 && t > 0.075f && xPos < -7)
+                if (Input.GetTouch(0).position.x < Screen.width / 2 && t > 0.075f && xPos > -7)
                 {
                     xPos--;
                     t = 0.0f;
