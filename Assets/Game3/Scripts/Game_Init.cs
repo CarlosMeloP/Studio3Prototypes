@@ -9,7 +9,7 @@ public class Game_Init : MonoBehaviour {
         Screen.orientation = ScreenOrientation.LandscapeLeft;
         P_Collide.heatlh = 3;
         P_Collide.tokens = 0;
-        DestroyMe.timeToDestroy = 10;
+        DestroyMe.timeToDestroy = 3f;
 	}
 	
 	// Update is called once per frame

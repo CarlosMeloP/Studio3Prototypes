@@ -8,8 +8,8 @@ public class P_Collide : MonoBehaviour
     public static int tokens;
     public GameObject tokenUI;
     public static int heatlh = 3;
-    public AudioClip collectToken;
-    public AudioClip pain;
+    //public AudioClip collectToken;
+   // public AudioClip pain;
     public SpriteRenderer rend;
     public Color altColor = Color.red;
     public Color initColor;
