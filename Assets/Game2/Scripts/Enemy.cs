@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour {
 
 	public Vector2 speedRange;
 
-	private float maxSpeed = 5;
+	public float maxSpeed = 3f;
 	private Rigidbody2D rb;
 
 	bool enemyFlag;

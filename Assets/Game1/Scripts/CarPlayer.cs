@@ -59,7 +59,7 @@ public class CarPlayer : MonoBehaviour
                  {
                      //Rotate the player
                      transform.Rotate(0, Joystick.Horizontal * rotSpeed * Time.smoothDeltaTime, 0);
-                    /*
+                    
                     if (Joystick.Vertical>0)
                     { 
                     GetComponent<Rigidbody>().AddForce(transform.right * -Joystick.Horizontal * moveSpeed *50 * Time.smoothDeltaTime);
@@ -68,7 +68,7 @@ public class CarPlayer : MonoBehaviour
                     {
                         GetComponent<Rigidbody>().AddForce(transform.right * Joystick.Horizontal * moveSpeed * 50 * Time.smoothDeltaTime);
                     }
-                    */
+                    
                 }
              }
 
