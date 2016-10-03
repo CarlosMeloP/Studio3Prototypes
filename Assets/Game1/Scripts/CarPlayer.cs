@@ -15,6 +15,9 @@ public class CarPlayer : MonoBehaviour
     public bl_Joystick Joystick;
     public bool activateJoystick;
 
+    public SteeringWheel SW;
+
+
     void Start ()
 	{
 		//Set screen orientation to landscape left
@@ -22,7 +25,9 @@ public class CarPlayer : MonoBehaviour
 		
 		//Set sleep time to never
 		Screen.sleepTimeout = SleepTimeout.NeverSleep;
-	}
+
+
+    }
 	
 	void Update ()
 	{
