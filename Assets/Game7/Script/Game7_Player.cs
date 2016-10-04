@@ -61,8 +61,9 @@ public class Game7_Player : MonoBehaviour
 		else
 		{
 			//AddForce (x force = acceleration.y) (z force = acceleration.x)
-			GetComponent<Rigidbody>().AddForce(new Vector3(-Input.acceleration.y,0,Input.acceleration.x) * speed * 5 * Time.deltaTime);
-		}	
+			//GetComponent<Rigidbody>().AddForce(new Vector3(-Input.acceleration.y,0,Input.acceleration.x) * speed * 5 * Time.deltaTime);
+            GetComponent<Rigidbody>().AddForce(new Vector3(Input.acceleration.x, 0, Input.acceleration.y) * speed * 5 * Time.deltaTime);
+        }	
 	}
 	
 	void OnTriggerEnter(Collider other)
