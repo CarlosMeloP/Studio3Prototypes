@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class Game2_Player : MonoBehaviour
+public class Game8_Player : MonoBehaviour
 {
 
 	public GameObject mesh;						//Mesh
@@ -166,7 +166,7 @@ public class Game2_Player : MonoBehaviour
 			dead = true;
 			//Set time scale to 0
 			Time.timeScale = 0;
-            Application.LoadLevel("Game 2");
+            Application.LoadLevel("Game8");
         }
 	}
 	

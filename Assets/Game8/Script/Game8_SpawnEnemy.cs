@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class Game2_SpawnEnemy : MonoBehaviour
+public class Game8_SpawnEnemy : MonoBehaviour
 {
 	public Transform[] spawnPosition;	//All spawn positions
 	public GameObject enemy;			//Enemy prefab

@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class Game2_Enemy : MonoBehaviour
+public class Game8_Enemy : MonoBehaviour
 {
 	public float moveSpeed;			//Move speed
 	public float attackSpeed;		//Attack speed
@@ -33,7 +33,7 @@ public class Game2_Enemy : MonoBehaviour
 				//Set tmpAttackSpeed to 0
 				tmpAttackSpeed = 0;
 				//Hit the player
-				player.GetComponent<Game2_Player>().Hit(damage);
+				player.GetComponent<Game8_Player>().Hit(damage);
 			}
 			else
 			{

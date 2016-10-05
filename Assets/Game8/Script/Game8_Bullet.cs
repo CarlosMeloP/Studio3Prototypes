@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class Game2_Bullet : MonoBehaviour
+public class Game8_Bullet : MonoBehaviour
 {
 	public float moveSpeed = 30f;	//Move Speed
 	public int damage = 40;			//Damage
@@ -27,7 +27,7 @@ public class Game2_Bullet : MonoBehaviour
 		if (other.gameObject.tag == "Enemy")
 		{
 			//Hit the enemy
-			other.gameObject.GetComponent<Game2_Enemy>().Hit(damage);
+			other.gameObject.GetComponent<Game8_Enemy>().Hit(damage);
 			//Destroy the bullet
 			StartCoroutine(Destroy(0));
 		}
